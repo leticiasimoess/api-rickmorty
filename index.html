@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rick and Morty</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+<!--//codigo da aula vnw 24/01 sobre API
+// Consumindo uma API
+//async vai pegar dados
+//await vai aguardar a requisição
+//resumo
+// Pega informações da internet (API).
+//Guarda essas informações em uma "caixinha mágica".
+//Mostra o nome e a imagem do personagem na tela.
+
+import {useState, useEffect} from 'react'//ajudam a guardar informações e fazer algo quando a página é carregada.
+import axios from 'axios'//é como um ajudante especial que sabe pegar informações da internet para nós.
+
+
+export default function App(){ //Estamos começando a criar um aplicativo que chamamos de App. É como abrir uma caixa para colocar todas as nossas ideias.
+  const[desenho, setDesenho] = useState([]) //variavel de estado 
+  //Criamos uma "caixinha mágica" chamada desenho. No começo, ela está vazia (é uma lista vazia []).
+//O setDesenho é uma varinha que usamos para mudar o que tem dentro da "caixinha".
+
+  const pegarDados = async () => {//Criamos uma função chamada pegarDados. 
+  // Ela vai buscar os dados dos personagens, mas como é "mágica" (ou assíncrona), precisamos esperar ela terminar.
+    const Dados = await axios.get('https://api.sampleapis.com/rickandmorty/characters')//Aqui o ajudante axios vai na internet, 
+    // entrar no endereço https://api.sampleapis.com/rickandmorty/characters e pega as informações dos personagens para nós.
+   // Nós guardamos esses dados em uma nova "caixinha" chamada Dados.
+      setDesenho(Dados.data[0])// vai atualizar a variavel de estado o data vai asessar os dados da api
+      //Pegamos o primeiro personagem da lista (Dados.data[0]) e colocamos dentro da nossa "caixinha mágica" chamada desenho
+
+  }
+
+  useEffect(()=>{  
+    pegarDados()
+  },[])//Aqui estamos dizendo:
+  // "Quando a página abrir, use a função pegarDados para buscar as informações."
+
+  return( //Começamos a dizer o que vai aparecer na tela do computador.
+
+    <>
+    <h1>Api</h1>
+    <h2>Application Programming Interface / Interface de Programação de Aplicações</h2>
+
+    <article> 
+  
+      <img src={desenho.image} alt=""/>
+      <h2>{desenho.name}</h2>
+      </article>
+    </>
+  )
+}
+-->

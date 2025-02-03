@@ -1,0 +1,64 @@
+// Estilo para o aplicativo inteiro
+body {
+    font-family: "Josefin Sans", serif;    // Define o tipo de letra.
+    background-color:rgb(244, 252, 207); // Cor de fundo clara para ficar agradável aos olhos.
+    margin: 0; // Remove margens extras da página.
+    padding: 0; // Remove espaços internos extras da página.
+    text-align: center; // Centraliza todo o conteúdo na tela.
+  }
+  
+  // Estilo do título principal (h1)
+  h1 {
+    margin-top: 120px; // Dá um espaço em cima do título.
+    font-size: 2.5rem; // Deixa o título maior.
+    color: #333; // Cor do h1 .
+    font-family: "Josefin Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: italic;
+  
+  }
+  
+  // Estilo da lista de personagens
+  ul {
+    display: grid; // Organiza os personagens em uma grade (parecido com bloquinhos).
+    grid-template-columns: repeat(4, 1fr); // Divide a grade em 6 colunas iguais.
+    gap: 45px; // Dá um espaço de 20px entre os personagens.
+    list-style: none; // Remove as bolinhas da lista.
+    padding: 0; // Remove o espaço interno extra da lista.
+    margin: 20px auto; // Dá um espaço em cima e embaixo da lista e centraliza.
+    max-width: 1000px; // Limita o tamanho da grade para não ocupar a tela toda.
+  }
+  
+  // Estilo de cada personagem (li)
+  li {
+    background-color:rgb(214, 223, 225); // Fundo branco para os personagens.
+    border-radius: 10px; // Bordas arredondadas para ficar bonitinho.
+    padding: 8px; // Dá um espaço interno para os textos e imagem.
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5); // Cria uma sombra para parecer um cartão.
+    transition: transform 0.2s; // Faz uma animação suave ao passar o mouse.
+    
+    &:hover {
+      transform: scale(1.05); // Aumenta o cartão um pouquinho quando o mouse passa por cima.
+    }
+  }
+  
+  // Estilo da imagem dos personagens
+  img {
+    max-width: 100%; // Garante que a imagem nunca vai ficar maior que o cartão.
+    border-radius: 10px; // Arredonda as bordas da imagem.
+  }
+  
+  // Estilo do nome dos personagens (h2)
+  h2 {
+    font-size: 1.5rem; // Deixa o nome grande e chamativo.
+    color:black; // Cor cinza escuro.
+    margin: 10px 0; // Dá um espaço em cima e embaixo do nome.
+  }
+  
+  // Estilo do status dos personagens (p)
+  p {
+    font-size: 1rem; // Texto normal para o status.
+    color:rgb(102, 151, 167); // Cor cinza claro para não chamar tanta atenção.
+  }
+  
