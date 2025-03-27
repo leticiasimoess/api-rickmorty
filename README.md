@@ -1,6 +1,7 @@
 # Consumindo uma API com React
 O que é esse projeto?
-Este é um aplicativo simples feito em React. Ele busca informações de personagens do desenho Rick and Morty da internet usando uma "máquina de dados" chamada API. Depois, mostra o nome e a imagem de um personagem na tela.
+Este é um aplicativo simples feito em React. Ele busca informações de personagens do desenho Rick and Morty da internet usando uma "máquina de dados" chamada API.
+Depois, mostra o nome e a imagem de um personagem na tela.
 
 # Como funciona?
 O que é uma API?
@@ -45,6 +46,6 @@ npm install sass
 Substitua o conteúdo do arquivo App.js pelo código do projeto disponivel no index.jsx
 
 3. Rodar o projeto
-No terminal(bash), rode este comando para iniciar o projeto:
+No terminal(gitbash), rode este comando para iniciar o projeto:
 npm run dev
 O navegador vai abrir e mostrar o aplicativo.
